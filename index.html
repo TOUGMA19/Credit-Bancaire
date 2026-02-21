@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulateur Bancaire UEMOA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header><h1>🏦 Simulateur Bancaire UEMOA</h1></header>
+<main>
+<section class="form">
+<label>Banque <input id="banque"></label>
+<label>Montant <input id="capital" type="number"></label>
+<label>Devise
+<select id="devise"><option>FCFA</option><option>EUR</option></select>
+</label>
+<label>Taux annuel (%) <input id="taux" type="number"></label>
+<label>Durée (mois) <input id="duree" type="number"></label>
+<label>Assurance (%) <input id="assurance" value="0.5"></label>
+<label>Différé (mois) <input id="differe" value="0"></label>
+<button id="simuler">Simuler</button>
+</section>
+<section><p id="mensualite"></p><p id="score"></p></section>
+<section><canvas id="chart"></canvas></section>
+</main>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
