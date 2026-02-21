@@ -1,11 +1,86 @@
 {
-"name":"Simulateur Bancaire UEMOA",
-"short_name":"UEMOA Loan",
-"start_url":".",
-"display":"standalone",
-"theme_color":"#0f766e",
-"background_color":"#ffffff",
-"icons":[
-{"src":"icons/icon-192.png","sizes":"192x192","type":"image/png"},
-{"src":"icons/icon-512.png","sizes":"512x512","type":"image/png"}
-]}
+  /* ================= OBLIGATOIRE ================= */
+
+  "name": "Simulateur Bancaire UEMOA",
+  "short_name": "UEMOA Loan",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+
+  /* ================= RECOMMANDÉ ================= */
+
+  "display": "standalone",
+  "theme_color": "#0f766e",
+  "background_color": "#ffffff",
+  "description": "Application de simulation de prêts bancaires UEMOA avec assurance, différé, multi-devise FCFA/EUR et graphiques professionnels.",
+  "orientation": "portrait",
+  "screenshots": [
+    {
+      "src": "screenshots/screen1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    },
+    {
+      "src": "screenshots/screen2.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ],
+
+  /* ================= OPTIONNEL ================= */
+
+  "id": "/uemoa-loan-simulator",
+  "categories": ["finance", "business", "productivity"],
+  "lang": "fr",
+  "dir": "ltr",
+  "scope": "/",
+
+  "shortcuts": [
+    {
+      "name": "Nouvelle simulation",
+      "short_name": "Simuler",
+      "description": "Lancer une nouvelle simulation de prêt",
+      "url": "/index.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+
+  "share_target": {
+    "action": "/index.html",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text"
+    }
+  },
+
+  "prefer_related_applications": false,
+  "related_applications": [],
+
+  "display_override": ["standalone", "minimal-ui"],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+
+  "edge_side_panel": {
+    "preferred_width": 420
+  }
+}
